@@ -1,0 +1,19 @@
+{
+  "name": "@dynamic-subagents/runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@deepagents/context": "6.1.2",
+    "@deepagents/experimental": "6.1.2",
+    "@electric-sql/pglite": "^0.5.4",
+    "pg-boss": "^12.26.1"
+  }
+}

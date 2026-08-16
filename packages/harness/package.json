@@ -1,0 +1,17 @@
+{
+  "name": "@dynamic-subagents/harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@deepagents/context": "6.1.2",
+    "@deepagents/experimental": "6.1.2"
+  }
+}

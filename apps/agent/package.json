@@ -1,0 +1,16 @@
+{
+  "name": "@dynamic-subagents/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.41",
+    "@deepagents/experimental": "6.1.2",
+    "@dynamic-subagents/harness": "*",
+    "@dynamic-subagents/runtime": "*"
+  }
+}
