@@ -53,6 +53,8 @@ Requirements:
 - Node.js 24.11 or newer
 - Docker
 - an OpenAI API key
+- A sibling `../deepagents` checkout with its local packages built; this project
+  deliberately file-links `packages/context` and `packages/experimental`.
 
 ```sh
 npm install

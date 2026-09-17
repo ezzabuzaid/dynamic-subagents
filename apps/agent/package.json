@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.41",
-    "@deepagents/experimental": "6.1.2",
+    "@deepagents/experimental": "file:../../../deepagents/packages/experimental",
     "@dynamic-subagents/harness": "*",
     "@dynamic-subagents/runtime": "*"
   }

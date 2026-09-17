@@ -7,13 +7,18 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "test": "node --test test/*.test.ts",
+    "test": "node --test --test-timeout=60000 test/*.test.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@deepagents/context": "6.1.2",
-    "@deepagents/experimental": "6.1.2",
+    "@deepagents/context": "file:../../../deepagents/packages/context",
+    "@deepagents/experimental": "file:../../../deepagents/packages/experimental",
     "@electric-sql/pglite": "^0.5.4",
-    "pg-boss": "^12.26.1"
+    "pg-boss": "file:../../../deepagents/node_modules/pg-boss"
+  },
+  "devDependencies": {
+    "ai": "7.0.85",
+    "just-bash": "file:../../../deepagents/node_modules/just-bash",
+    "zod": "4.4.3"
   }
 }

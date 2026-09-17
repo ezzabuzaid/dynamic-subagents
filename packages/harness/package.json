@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@deepagents/context": "6.1.2",
-    "@deepagents/experimental": "6.1.2"
+    "@deepagents/context": "file:../../../deepagents/packages/context",
+    "@deepagents/experimental": "file:../../../deepagents/packages/experimental"
   }
 }
