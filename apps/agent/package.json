@@ -8,9 +8,10 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^4.0.41",
-    "@deepagents/experimental": "file:../../../deepagents/packages/experimental",
+    "@ai-sdk/openai": "^4.0.99",
+    "@deepagents/experimental": "7.1.4",
     "@dynamic-subagents/harness": "*",
-    "@dynamic-subagents/runtime": "*"
+    "@dynamic-subagents/runtime": "*",
+    "ai": "7.0.148"
   }
 }

@@ -27,8 +27,7 @@ export function createRuntimeStack(multiAgent: MultiAgentHostConfig) {
     boss.on('error', (error) => console.error('[queue error]', error));
     await boss.start();
 
-    const queue = new PgBossTurnQueue(boss, { schema: 'pgboss' });
-    await queue.initialize();
+    const queue = await PgBossTurnQueue.create(boss, { schema: 'pgboss' });
     const streamStore = new SqliteStreamStore(
       resources.use(new DatabaseSync(':memory:')),
     );

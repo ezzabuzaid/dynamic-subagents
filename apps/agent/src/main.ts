@@ -1,8 +1,9 @@
 import { openai } from "@ai-sdk/openai";
+import { consumeStream, createUIMessageStream } from "ai";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 
-import { AgentRuntime, renderTurn } from "@deepagents/experimental/zukhruf";
+import { AgentRuntime } from "@deepagents/experimental/zukhruf";
 import { discoverAgentTree } from "@dynamic-subagents/harness";
 import {
   createWorkspaceSandbox,
@@ -65,4 +66,13 @@ const turn = await host.enqueue(
     },
   },
 );
-await renderTurn(turn.stream);
+await consumeStream({
+  stream: createUIMessageStream({
+    execute: ({ writer }) => writer.merge(turn.stream),
+    onEnd: ({ responseMessage }) => {
+      for (const part of responseMessage.parts) {
+        if (part.type === "text") console.log(part.text);
+      }
+    },
+  }),
+});
