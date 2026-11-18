@@ -11,14 +11,14 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@deepagents/context": "7.1.4",
-    "@deepagents/experimental": "7.1.4",
+    "@deepagents/context": "7.7.0",
+    "@deepagents/experimental": "7.7.0",
     "@electric-sql/pglite": "^0.5.4",
     "@opentelemetry/api": "1.10.0",
     "pg-boss": "12.38.0"
   },
   "devDependencies": {
-    "ai": "7.0.148",
+    "ai": "7.0.177",
     "just-bash": "3.6.0",
     "zod": "4.6.7"
   }

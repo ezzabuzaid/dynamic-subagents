@@ -19,5 +19,13 @@
   "devDependencies": {
     "@types/node": "^26.1.1",
     "typescript": "6.0.3"
+  },
+  "allowScripts": {
+    "ssh2": true,
+    "cpu-features": true,
+    "protobufjs": false,
+    "@mongodb-js/zstd": true,
+    "node-liblzma": true,
+    "esbuild": true
   }
 }

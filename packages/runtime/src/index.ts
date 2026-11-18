@@ -32,7 +32,13 @@ export function createWorkspaceSandbox(options: WorkspaceSandboxOptions) {
         .slice(0, 16)}`,
       image: 'bash:5.3-alpine3.24',
       installers: [pkg(['git', 'nodejs', 'npm', 'ripgrep'])],
-      security: { securityOpt: ['no-new-privileges'] },
+      container: {
+        HostConfig: {
+          Memory: 1024 ** 3,
+          NanoCpus: 2e9,
+          SecurityOpt: ['no-new-privileges'],
+        },
+      },
       volumes: [
         {
           type: 'bind',
